@@ -1,12 +1,13 @@
 本教程对TrainTicket无服务器BenchMark进行部署指导：
 
 <h2 id="i3IfX">1.OpenWhisk部署</h2>
+
+安装相关组件
 ```bash
 wget -c https://services.gradle.org/distributions/gradle-5.5.1-bin.zip -P /tmp
 sudo unzip -d /opt/gradle /tmp/gradle-5.5.1-bin.zip
 export GRADLE_HOME=/opt/gradle/gradle-5.5.1
-export PATH=${GRADLE_HOME}/bin:${PATH}::：：q 
-
+export PATH=${GRADLE_HOME}/bin:${PATH}
 git clone git@github.com:TanYuzhen/Train-Ticket-Serverless.git
 cd ./Train-Ticket-Serverless
 cp ./bin/wsk /usr/local/bin
@@ -41,6 +42,7 @@ wsk property set --auth 23bc46b1-71f6-4ed5-8c54-816aa4f8c502:123zO3xZCLrMN6v2BKK
 ```
 
 <h2 id="aqYB3">2.Train Ticket Serverless相关组件部署</h2>
+
 ```bash
 cd ./train_ticket
 ./init.sh
