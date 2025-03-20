@@ -2,12 +2,12 @@
     "runtimes": {
         "nodejs": [
             {
-                "kind": "nodejs:14",
+                "kind": "nodejs:10",
                 "default": true,
                 "image": {
                     "prefix": "openwhisk",
-                    "name": "action-nodejs-v14",
-                    "tag": "1.20.0"
+                    "name": "action-nodejs-v10",
+                    "tag": "nightly"
                 },
                 "deprecated": false,
                 "attached": {
@@ -17,7 +17,7 @@
                 "stemCells": [
                     {
                         "initialCount": 2,
-                        "memory": "256 MB",
+                        "memory": "512 MB",
                         "reactive": {
                             "minCount": 1,
                             "maxCount": 4,
@@ -27,6 +27,20 @@
                         }
                     }
                 ]
+            },
+            {
+                "kind": "nodejs:14",
+                "default": false,
+                "image": {
+                    "prefix": "openwhisk",
+                    "name": "action-nodejs-v14",
+                    "tag": "1.20.0"
+                },
+                "deprecated": false,
+                "attached": {
+                    "attachmentName": "codefile",
+                    "attachmentType": "text/plain"
+                }
             },
             {
                 "kind": "nodejs:16",
@@ -46,11 +60,53 @@
         "python": [
             {
                 "kind": "python:3",
+                "default": false,
+                "image": {
+                    "prefix": "diomwu",
+                    "name": "action-python-io-v3.7",
+                    "tag": "FaaSCache"
+                },
+                "deprecated": false,
+                "attached": {
+                    "attachmentName": "codefile",
+                    "attachmentType": "text/plain"
+                }
+            },
+            {
+                "kind": "python-io:3",
                 "default": true,
                 "image": {
-                    "prefix": "openwhisk",
-                    "name": "action-python-v3.7",
-                    "tag": "1.17.0"
+                    "prefix": "diomwu",
+                    "name": "action-python-io-v3.7",
+                    "tag": "HashCache"
+                },
+                "deprecated": false,
+                "attached": {
+                    "attachmentName": "codefile",
+                    "attachmentType": "text/plain"
+                }
+            },
+            {
+                "kind": "python-io:ai",
+                "default": false,
+                "image": {
+                    "prefix": "diomwu",
+                    "name": "action-python-io-v3.6-ai",
+                    "tag": "HashCache"
+                },
+                "deprecated": false,
+                "attached": {
+                    "attachmentName": "codefile",
+                    "attachmentType": "text/plain"
+                }
+            },
+            {
+                "kind": "python:ai",
+                "default": false,
+                "image": {
+                    "prefix": "diomwu",
+                    "name": "action-python-io-v3.6-ai",
+                    "tag": "FaaSCache"
                 },
                 "deprecated": false,
                 "attached": {
@@ -125,6 +181,21 @@
                     "prefix": "openwhisk",
                     "name": "java8action",
                     "tag": "1.17.0"
+                },
+                "deprecated": false,
+                "attached": {
+                    "attachmentName": "jarfile",
+                    "attachmentType": "application/java-archive"
+                },
+                "requireMain": true
+            },
+            {
+                "kind": "java:8-io",
+                "default": false,
+                "image": {
+                    "prefix": "diomwu",
+                    "name": "java8action",
+                    "tag": "HashCache"
                 },
                 "deprecated": false,
                 "attached": {

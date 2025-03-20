@@ -145,11 +145,11 @@ whisk:
     openwhiskCli:
       tag: "1.1.0"
     openwhiskCatalog:
-      gitTag: "1.0.0"
+      gitTag: "master"
     openwhiskPackageAlarms:
-      gitTag: "2.3.0"
+      gitTag: "master"
     openwhiskPackageKafka:
-      gitTag: "2.1.0"
+      gitTag: "master"
 
 k8s:
   domain: cluster.local
