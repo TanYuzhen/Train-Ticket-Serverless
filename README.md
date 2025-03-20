@@ -4,10 +4,16 @@
 
 安装相关组件
 ```bash
+# Install Gradle to build function
 wget -c https://services.gradle.org/distributions/gradle-5.5.1-bin.zip -P /tmp
 sudo unzip -d /opt/gradle /tmp/gradle-5.5.1-bin.zip
 export GRADLE_HOME=/opt/gradle/gradle-5.5.1
+<<<<<<< HEAD
 export PATH=${GRADLE_HOME}/bin:${PATH}
+=======
+export PATH=${GRADLE_HOME}/bin:${PATH}::：：q 
+# Clone the Project
+>>>>>>> d7852df (add reset.sh)
 git clone git@github.com:TanYuzhen/Train-Ticket-Serverless.git
 cd ./Train-Ticket-Serverless
 cp ./bin/wsk /usr/local/bin
