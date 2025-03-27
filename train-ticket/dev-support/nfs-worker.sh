@@ -1,6 +1,6 @@
 set -x
 set -e
-MASTER_IP=192.168.31.205
+MASTER_IP=192.168.31.70
 
 sudo apt-get install nfs-common -y
 

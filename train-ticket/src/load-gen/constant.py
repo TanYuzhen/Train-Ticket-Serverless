@@ -1,14 +1,14 @@
 import os
 
 ############ Used to index config files ############
-HOME_DIR="/home/dell/tyz/HashCache"
-UTILS_DIR=f"{HOME_DIR}/serverless-trainticket/src/load-gen/utils"
+HOME_DIR="/home/master/Train-Ticket-Serverless"
+UTILS_DIR=f"{HOME_DIR}/train-ticket/src/load-gen/utils"
 
 ############ Used to genreate Azure load ############
 AZURE_TRACE_ADDR = "/vagrant/share/Azure/AzureFunctionsInvocationTraceForTwoWeeksJan2021/"
-AZURE_BENCH_ADDR=f"{HOME_DIR}/serverless-trainticket/src/load-gen/azure_load"
+AZURE_BENCH_ADDR=f"{HOME_DIR}/train-ticket/src/load-gen/azure_load"
 AZURE_NUM_OF_INVOS=5600
-AZURE_RPS_PLOT_DIR=f"{HOME_DIR}/serverless-trainticket/src/load-gen/azure_load/imgs"
+AZURE_RPS_PLOT_DIR=f"{HOME_DIR}/train-ticket/src/load-gen/azure_load/imgs"
 AZURE_SAMPLE_UNIT="60S"
 
 ############ Used to get action API ############
@@ -21,7 +21,7 @@ WHISK_PASSWD=os.environ.get("WHISK_PASSWD", WHISK_PASSWD_DEFAULT)
 WHISK_AUTH=f"{WHISK_USERNAME}:{WHISK_PASSWD}"
 WHISK_AUTH_TUPLE=(WHISK_USERNAME,WHISK_PASSWD)
 
-WHISK_APIHOST_DEFAULT="192.168.31.205:31001"
+WHISK_APIHOST_DEFAULT="192.168.31.70:31001"
 WHISK_APIHOST=os.environ.get("WHISK_APIHOST", WHISK_APIHOST_DEFAULT)
 WHISK_APIHOST_HTTPS=f"https://{WHISK_APIHOST}"
 
@@ -37,4 +37,4 @@ HIGH_QPS=30
 QPS = os.environ.get("evaluate_qps", LOW_QPS)
 
 # Station list csv file
-STATION_PATH=f"{HOME_DIR}/serverless-trainticket/src/initDB"
+STATION_PATH=f"{HOME_DIR}/train-ticket/src/initDB"

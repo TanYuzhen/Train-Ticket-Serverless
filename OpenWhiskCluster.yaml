@@ -17,8 +17,16 @@ whisk:
         min: "128m"
         max: "4096m"
         std: "256m"
+      concurrency:
+        min: 1
+        max: 10
+        std: 5
   containerPool:
     userMemory: "32768m" 
+  containerProxy:
+    timeouts:
+      idleContainer: "1 minutes"
+# whisk.container-proxy.timeouts.idle-container=\"1 minutes\"
 
 nginx:
   httpsNodePort: 31001
@@ -35,6 +43,11 @@ invoker:
   imageName: "diomwu/invoker"
   imageTag: "OpenWhisk"
   imagePullPolicy: "Always"
+  containerProxy:
+    timeouts:
+      idleContainer: "1 minutes"
+  options: '-Dwhisk.kubernetes.user-pod-node-affinity.enabled=false -Dwhisk.container-proxy.timeouts.idle-container=\"1 minutes\"'
+
 
 scheduler:
   enabled: false
@@ -57,3 +70,16 @@ k8s:
 provider:
     name: openwhisk
     ignore_certs: true
+
+# Metrics
+metrics:
+  # set true to enable prometheus exporter
+  prometheusEnabled: true
+  # passing prometheus-enabled by a config file, required by openwhisk
+  whiskconfigFile: "whiskconfig.conf"
+  # set true to enable Kamon
+  kamonEnabled: true
+  # set true to enable Kamon tags
+  kamonTags: true
+  # set true to enable user metrics
+  userMetricsEnabled: true

@@ -7,7 +7,7 @@ sudo systemctl enable nfs-kernel-server
 sudo systemctl start nfs-kernel-server
 
 SHARED_DIR="/var/nfs/data"
-MASTER_IP=192.168.31.205
+MASTER_IP=192.168.31.70
 
 
 sudo mkdir $SHARED_DIR -p

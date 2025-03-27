@@ -11,7 +11,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/station
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 apiVersion: v1
@@ -27,7 +27,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/auth
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 apiVersion: v1
@@ -43,7 +43,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/config
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 
@@ -60,7 +60,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/contacts
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 apiVersion: v1
@@ -76,7 +76,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/insidePayment
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 apiVersion: v1
@@ -92,7 +92,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/order
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 apiVersion: v1
@@ -108,7 +108,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/payment
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 apiVersion: v1
@@ -124,7 +124,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/price
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 apiVersion: v1
@@ -140,7 +140,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/route
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 apiVersion: v1
@@ -156,7 +156,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/security
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 apiVersion: v1
@@ -172,7 +172,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/train
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 apiVersion: v1
@@ -188,7 +188,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/travel
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 ---
 apiVersion: v1
@@ -204,7 +204,7 @@ spec:
     persistentVolumeReclaimPolicy: Retain
     nfs:
       path: /srv/nfs/kubedata/user
-      server: 192.168.31.205
+      server: 192.168.31.70
 
 
 ---
