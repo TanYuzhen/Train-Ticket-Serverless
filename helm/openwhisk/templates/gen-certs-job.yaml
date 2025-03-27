@@ -29,6 +29,8 @@ spec:
   template:
     metadata:
       name: {{ .Release.Name }}-gen-certs
+      annotations:
+        sidecar.istio.io/inject: "false"
       labels:
         name: {{ .Release.Name }}-gen-certs
 {{ include "openwhisk.label_boilerplate" . | indent 8 }}

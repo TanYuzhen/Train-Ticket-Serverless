@@ -48,7 +48,7 @@ spec:
 
       initContainers:
       - name: download-dashboards
-        image: "appropriate/curl:latest"
+        image: "alpine:latest"
         imagePullPolicy: Always
         command: ["sh", "/etc/grafana/download_dashboards.sh"]
         resources:

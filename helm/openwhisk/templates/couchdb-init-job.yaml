@@ -28,6 +28,8 @@ spec:
   template:
     metadata:
       name: {{ .Release.Name }}-init-couchdb
+      annotations:
+        sidecar.istio.io/inject: "false"
       labels:
         name: {{ .Release.Name }}-init-couchdb
 {{ include "openwhisk.label_boilerplate" . | indent 8 }}

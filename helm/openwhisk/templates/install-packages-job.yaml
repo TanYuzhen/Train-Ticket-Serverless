@@ -27,6 +27,8 @@ spec:
   template:
     metadata:
       name: {{ .Release.Name }}-install-packages
+      annotations:
+        sidecar.istio.io/inject: "false"
       labels:
         name: {{ .Release.Name }}-install-packages
 {{ include "openwhisk.label_boilerplate" . | indent 8 }}
